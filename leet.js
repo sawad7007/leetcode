@@ -1,1 +1,8 @@
-console.log('hello');
+
+function createHelloWorld(){
+    return function(){
+      return 'Hello World';
+    };
+  }
+  const  hello=createHelloWorld();
+  console.log(hello());
