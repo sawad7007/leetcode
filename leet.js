@@ -1,8 +1,13 @@
 
-function createHelloWorld(){
-    return function(){
-      return 'Hello World';
-    };
-  }
-  const  hello=createHelloWorld();
-  console.log(hello());
+var createCounter = function(n) {
+  count=n;
+  
+  return function() {
+      return count++
+      
+  };
+};
+
+counter=createCounter(10);
+console.log(counter());
+console.log(counter());
